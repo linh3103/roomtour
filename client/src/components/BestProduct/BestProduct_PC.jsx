@@ -16,7 +16,7 @@ const BestProductPC = (props) => {
         <div className="col-4 ">
             <div className="col-img-bottom">
                 <p className="label">6컬러</p>
-                <a href="#"><img src={`images/`+imageName} alt="" /></a>
+                <a href="#"><img src={`https://www.amante.co.kr/uploads/product/`+imageName} alt="" /></a>
                 <div className="caption-infor">
                     <a href="#">
                         <p className="txt">{product_nm}</p>
