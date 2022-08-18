@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from 'react';
 import axios from 'axios';
 import TopMenu from '../../components/Menu/TopMenu';
-
+import {openToggle, closeToggle, openSearch, closeSearch, openSearchmb, closeSearchmb} from './search'
 const Header = () => {
 
     const [menu, setMenu] = useState([]);
@@ -67,12 +67,12 @@ const Header = () => {
                             <button
                             type="button"
                             className="btn-search-tablet icon-search"
-                            onclick="openSearch()"
+                            onClick={()=> openSearch()}
                         />
                             <div id="myOverlay" className="overlay">
                                 <span
                                     className="closebtn"
-                                    onClick="closeSearch()"
+                                    onClick={()=> closeSearch()}
                                     title="Close Overlay"
                                 >
                                     ×
@@ -89,21 +89,21 @@ const Header = () => {
                 </div>
             </div>
             {/* header mb */}
-            <div class="header-mb">
-                <div id="top-mb" class="top-nav-mb">
-                    <div class="logo-mb">
-                        <img src="images/pc_logo .png" alt="" />
+            <div className="header-mb">
+                <div id="top-mb" className="top-nav-mb">
+                    <div className="logo-mb">
+                        <img src="images/pc_logo.png" alt="" />
                     </div>
-                    <div class="btn-toggle">
-                        <button id="open-toggle" type="button" class="toggle-open icon-toggle" onclick="openToggle()"></button>
+                    <div className="btn-toggle">
+                        <button id="open-toggle" type="button" className="toggle-open icon-toggle" onClick={() => openToggle()}></button>
                     </div>
-                    <div class="icon-right-top">
-                        <button type="button" class="icon-search-mb" onclick="openSearchmb()"></button>
-                        <button type="button" class="icon-cart-mb"></button>
+                    <div className="icon-right-top">
+                        <button type="button" className="icon-search-mb" onClick={() => openSearchmb()}></button>
+                        <button type="button" className="icon-cart-mb"></button>
                     </div>
-                    <div id="toggle-search" class="overlay">
-                        <span class="closebtn" onclick="closeSearchmb()" title="Close Overlay">×</span>
-                        <div class="overlay-content">
+                    <div id="toggle-search" className="overlay">
+                        <span className="closebtn" onClick={()=> closeSearchmb()} title="Close Overlay">×</span>
+                        <div className="overlay-content">
                             <form action="/action_page.php">
                                 <input type="text" placeholder="Search.." name="search" />
                                 <button type="submit" ></button>
@@ -111,48 +111,48 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <div id="nav-mb" class="nav-mb">
+                <div id="nav-mb" className="nav-mb">
                     <ul>
                         {
                             menu && menu.map(item => <TopMenu key={item.banner_seq} topMenu={item} />)
                         }
                     </ul>
                 </div>
-                <div id="div-toggle-mb" class="toggle-mb">
+                <div id="div-toggle-mb" className="toggle-mb">
 
-                    <span class="close-toggle" onclick="closeToggle()">x</span>
-                    <div class="toggle-top">
-                        <div class="logo">
-                            <img src="./images/pc_logo.png" alt="" />
+                    <span className="close-toggle" onClick={()=> closeToggle()}>x</span>
+                    <div className="toggle-top">
+                        <div className="logo">
+                            <img src="images/pc_logo.png" alt="" />
                         </div>
-                        <div class="icon-app">
-                            <p class="txt">앱 다운로드</p>
-                            <button type="button" class="icon-android"></button>
-                            <button type="button" class="icon-ios"></button>
+                        <div className="icon-app">
+                            <p className="txt">앱 다운로드</p>
+                            <button type="button" className="icon-android"></button>
+                            <button type="button" className="icon-ios"></button>
                         </div>
                     </div>
-                    <div class="btn-login-toggle">
-                        <button type="button" class="btn-toggle-group btn-login-mb">로그인</button>
-                        <button type="button" class="btn-toggle-group btn-sign-mb">회원가입</button>
+                    <div className="btn-login-toggle">
+                        <button type="button" className="btn-toggle-group btn-login-mb">로그인</button>
+                        <button type="button" className="btn-toggle-group btn-sign-mb">회원가입</button>
                     </div>
-                    <div class="icon-service-mb">
+                    <div className="icon-service-mb">
                         <ul>
-                            <li class="icon-cart-toggle"><a href="#">장바구니</a></li>
-                            <li class="icon-deliver"><a href="#">주문/배송</a></li>
-                            <li class="icon-user"><a href="#">마이페이지</a></li>
-                            <li class="icon-cs"><a href="#">고객센터</a></li>
+                            <li className="icon-cart-toggle"><a href="#">장바구니</a></li>
+                            <li className="icon-deliver"><a href="#">주문/배송</a></li>
+                            <li className="icon-user"><a href="#">마이페이지</a></li>
+                            <li className="icon-cs"><a href="#">고객센터</a></li>
                         </ul>
                     </div>
-                    <div class="cate-toggle">
+                    <div className="cate-toggle">
                         <ul>
-                            <li class="icon-sale"><a href="#">SALE</a></li>
-                            <li class="icon-pet"><a href="#">PET</a></li>
-                            <li class="icon-concept"><a href="#">컨셉룸</a></li>
-                            <li class="icon-new"><a href="#">신상품</a></li>
-                            <li class="icon-best"><a href="#">베스트</a></li>
+                            <li className="icon-sale"><a href="#">SALE</a></li>
+                            <li className="icon-pet"><a href="#">PET</a></li>
+                            <li className="icon-concept"><a href="#">컨셉룸</a></li>
+                            <li className="icon-new"><a href="#">신상품</a></li>
+                            <li className="icon-best"><a href="#">베스트</a></li>
                         </ul>
                     </div>
-                    <div class="list-icon-cate-mb">
+                    <div className="list-icon-cate-mb">
                         <h4>카테고리</h4>
                         <ul>
                             <li><a href="#"><img src="images/bed1.png" alt="" /></a>
@@ -182,17 +182,17 @@ const Header = () => {
                             <li><a href="#"><img src="images/bath1.png" alt="" /></a>
                                 <p>욕실</p>
                             </li>
-                            <li><a href="#"><img src="images/Background copy 1.png" alt="" /></a>
+                            <li><a href="#"><img src="images/Backgroundcopy1.png" alt="" /></a>
                                 <p>생활용품</p>
                             </li>
                         </ul>
                     </div>
-                    <div class="list-icon-bottom-mb">
+                    <div className="list-icon-bottom-mb">
                         <ul>
-                            <li class="icon-special"><a href="#">기획전</a></li>
-                            <li class="icon-community"><a href="#">커뮤니티</a></li>
-                            <li class="icon-push"><a href="#">알림내역</a></li>
-                            <li class="icon-setting"><a href="#">알림설정</a></li>
+                            <li className="icon-special"><a href="#">기획전</a></li>
+                            <li className="icon-community"><a href="#">커뮤니티</a></li>
+                            <li className="icon-push"><a href="#">알림내역</a></li>
+                            <li className="icon-setting"><a href="#">알림설정</a></li>
                         </ul>
                     </div>
                 </div>

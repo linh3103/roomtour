@@ -18,7 +18,7 @@ const CategoryList = () => {
             <div className="list-cate-main">
                 <ul>
                     {
-                        categorylist && categorylist.map(item => <CategoryItem category = {item}/>)
+                        categorylist && categorylist.map(item => <CategoryItem key={item.category_cd} category = {item}/>)
                     }
                 </ul>
             </div>
