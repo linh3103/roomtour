@@ -7,6 +7,11 @@ exports.list_best_products = (req, res) => {
 
 exports.get_images_name = (req, res) => {
     Product.getImagesName(req.params.product_cd, (error, result) => {
-        error ? res.send(error) : res.status(200).json(result)
+        error ? res.send(error) : res.status(200).json(result);
+    })
+}
+exports.get_insta_list = (req, res) => {
+    Product.getInstaList = ((error, result) => {
+        error ? res.send(error) : res.status(200).json(result);
     })
 }

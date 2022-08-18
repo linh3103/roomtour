@@ -22,16 +22,27 @@ Product.getListBestProducts = (result) => {
     ORDER BY tb2.order_cnt desc
     LIMIT 6`;
     mysql.query(sql, (err, res) => {
-        if (err) result(null, "Error");
-        result(null, res)
+        err ? result(null, err) : result(null, res);
     })
 };
 
 Product.getImagesName = (product_cd, result) => {
 	sql= "SELECT file_nm from wt_product_file WHERE product_cd = ? limit 1";
 	mysql.query(sql, product_cd, (err, res) => {
-		if(err) result(null, err);
-		result(null, res)
+		err ? result(null, err) : result(null, res);
+	})
+}
+
+Product.getInstaList = (result) => {
+	sql = `SELECT * 
+		   FROM wt_insta_data
+		   WHERE username = 'amante_home' 
+		   ORDER BY seq 
+		   DESC 
+		   LIMIT 0, 8
+		  `;
+	mysql.query(sql, (err, res) => {
+		err ? result(null, err) : result(null, res);
 	})
 }
 
