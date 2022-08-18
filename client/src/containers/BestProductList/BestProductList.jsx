@@ -17,7 +17,7 @@ const BestProductList = () => {
 
     
     return (
-        <div className="amante-best">
+        <div className="container amante-best">
             <div className="row row-best">
                 <div className="col-left col-4">
                     <div className="title-best">

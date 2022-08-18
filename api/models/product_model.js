@@ -39,7 +39,7 @@ Product.getInstaList = (result) => {
 		   WHERE username = 'amante_home' 
 		   ORDER BY seq 
 		   DESC 
-		   LIMIT 0, 8
+		   LIMIT 0, 10
 		  `;
 	mysql.query(sql, (err, res) => {
 		err ? result(null, err) : result(null, res);
