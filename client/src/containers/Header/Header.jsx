@@ -23,7 +23,7 @@ const Header = () => {
                     </a>
                 </div>
                 <div className="nav-header">
-                    <div className="nav">
+                    <div className="container nav">
                         <div className="nav-left">
                             <ul>
                                 <li style={{ marginTop: 8 }}>

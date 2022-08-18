@@ -11,7 +11,7 @@ exports.get_images_name = (req, res) => {
     })
 }
 exports.get_insta_list = (req, res) => {
-    Product.getInstaList = ((error, result) => {
+    Product.getInstaList((error, result) => {
         error ? res.send(error) : res.status(200).json(result);
     })
 }

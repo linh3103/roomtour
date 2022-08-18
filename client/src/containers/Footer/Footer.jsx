@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="footer">
         <div className="top-footer">
-            <div className="footer-infor">
+            <div className="footer-infor container">
                 <div className="colum col-left">
                     <div className="col-cus col-infor-cus">
                         <div className=" col-top">
@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
 
         </div>
-        <div className="middle-footer">
+        <div className="middle-footer container">
             <div className="nav-footer">
                 <ul>
                     <li><a href="#">회사소개</a></li>
@@ -45,7 +45,7 @@ const Footer = () => {
             </div>
         </div>
         <div className="bottom-footer">
-            <div className="txt-infor">
+            <div className="txt-infor container">
                 <h5>(주)평안 <span>대표</span> 오희택</h5>
                 <p><span>본사</span> 대구광역시 달서구 성서로71</p>
                 <p><span>서울사업소</span> 서울시 강서구 마곡동로 31</p>

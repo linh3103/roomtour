@@ -10,7 +10,7 @@ const CategoryList = () => {
             .then(data => setCategorylist(data))
     }, []);
     return (
-        <div className="cate-main">
+        <div className="container cate-main">
             <div id="title-cate-main">
                 <p>카테고리별 상품 찾기</p>
                 <a className="icon-arrow" href="#">더보기</a>
