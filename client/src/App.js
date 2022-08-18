@@ -1,6 +1,8 @@
-import BestProductList from './containers/BestProductList';
-import CategoryList from './containers/Category/CategoryList';
-import Header from './containers/Header';
+import BestProductList from "./containers/BestProductList/BestProductList";
+import CategoryList from "./containers/Category/CategoryList";
+import Footer from "./containers/Footer/Footer";
+import Header from "./containers/Header/Header";
+
 function App() {
 
   return (
@@ -8,6 +10,7 @@ function App() {
       <Header/>
       <CategoryList/>
       <BestProductList/>
+      <Footer/>
     </div>
   );
 }
