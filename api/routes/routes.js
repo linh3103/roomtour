@@ -10,4 +10,8 @@ module.exports = (app) => {
 
     app.route('/get_images/:product_cd')
         .get(ProductController.get_images_name);
+
+    const CategoryController = require('../controllers/category_controller');
+    app.route('/list_category')
+        .get(CategoryController.list_category);
 }
