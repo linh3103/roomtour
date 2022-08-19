@@ -1,5 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import BestProductItem from '../../components/BestProduct/BestProductItem';
+import BestProductItem from '../../components/ProductItems/BestProductItem';
 import axios from 'axios';
 
 const BestProductList = () => {
@@ -21,7 +21,7 @@ const BestProductList = () => {
                     <div className="title-best">
                         <p>베스트</p>
                         <h2>amante <br /> best</h2>
-                        <a className="icon-arrow" href="#">전체보기</a>
+                        <a className="icon-arrow" href="/#">전체보기</a>
                     </div>
                 </div>
                 <div id="img-best-pc" className="col-right col-8">
