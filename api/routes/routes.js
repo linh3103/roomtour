@@ -10,6 +10,9 @@ module.exports = (app) => {
     // app.route('/get_images/:product_cd')
     //     .get(ProductController.get_images_name);
 
+    app.route('/list_display')
+        .get(ProductController.get_display_list);
+
     app.route('/list_insta')
         .get(ProductController.get_insta_list);
 
