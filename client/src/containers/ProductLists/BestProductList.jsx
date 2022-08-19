@@ -13,7 +13,7 @@ const BestProductList = () => {
         }).then(res => setProducts(res.data))
           .catch(err => console.log(err))
     }, []);
-    
+
     return (
         <div className="container amante-best">
             <div className="row row-best">
@@ -27,7 +27,7 @@ const BestProductList = () => {
                 <div id="img-best-pc" className="col-right col-8">
                     <div className="row">
                         {
-                            products && products.map(item => <BestProductItem key={item.product_cd} product = {item} mode="PC"/>)
+                            products && products.map((item, index) => <BestProductItem no={index} key={item.product_cd} product = {item} mode="PC"/>)
                         }
                     </div>
                 </div>
