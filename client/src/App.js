@@ -1,4 +1,3 @@
-import MiddleBanner from "./components/Banners/MiddleBanner";
 import BestProductList from "./containers/ProductLists/BestProductList";
 import CategoryList from "./containers/Category/CategoryList";
 import Display from "./containers/Display/Display";
@@ -14,7 +13,6 @@ function App() {
       <Header/>
       <CategoryList/>
       <BestProductList/>
-      <MiddleBanner/>
       <RoomTourReviews/>
       <Display/> 
       <Instagram/>
