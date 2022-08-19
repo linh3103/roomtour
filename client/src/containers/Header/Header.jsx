@@ -18,7 +18,7 @@ const Header = () => {
         <>
             <div className="header-pc">
                 <div className="header">
-                    <a href="#" target="">
+                    <a href="/#" target="">
                         <img src="./images/top_logo.png" alt="" />
                     </a>
                 </div>
@@ -27,7 +27,7 @@ const Header = () => {
                         <div className="nav-left">
                             <ul>
                                 <li style={{ marginTop: 8 }}>
-                                    <a href="#" target="">
+                                    <a href="/#" target="">
                                         <img src="./images/pc_logo.png" alt="" />
                                     </a>
                                 </li>
@@ -54,12 +54,12 @@ const Header = () => {
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="#" target="">
+                                    <a href="/#" target="">
                                         회원가입
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" target="">
+                                    <a href="/#" target="">
                                         로그인
                                     </a>
                                 </li>
@@ -137,62 +137,62 @@ const Header = () => {
                     </div>
                     <div className="icon-service-mb">
                         <ul>
-                            <li className="icon-cart-toggle"><a href="#">장바구니</a></li>
-                            <li className="icon-deliver"><a href="#">주문/배송</a></li>
-                            <li className="icon-user"><a href="#">마이페이지</a></li>
-                            <li className="icon-cs"><a href="#">고객센터</a></li>
+                            <li className="icon-cart-toggle"><a href="/#">장바구니</a></li>
+                            <li className="icon-deliver"><a href="/#">주문/배송</a></li>
+                            <li className="icon-user"><a href="/#">마이페이지</a></li>
+                            <li className="icon-cs"><a href="/#">고객센터</a></li>
                         </ul>
                     </div>
                     <div className="cate-toggle">
                         <ul>
-                            <li className="icon-sale"><a href="#">SALE</a></li>
-                            <li className="icon-pet"><a href="#">PET</a></li>
-                            <li className="icon-concept"><a href="#">컨셉룸</a></li>
-                            <li className="icon-new"><a href="#">신상품</a></li>
-                            <li className="icon-best"><a href="#">베스트</a></li>
+                            <li className="icon-sale"><a href="/#">SALE</a></li>
+                            <li className="icon-pet"><a href="/#">PET</a></li>
+                            <li className="icon-concept"><a href="/#">컨셉룸</a></li>
+                            <li className="icon-new"><a href="/#">신상품</a></li>
+                            <li className="icon-best"><a href="/#">베스트</a></li>
                         </ul>
                     </div>
                     <div className="list-icon-cate-mb">
                         <h4>카테고리</h4>
                         <ul>
-                            <li><a href="#"><img src="images/bed1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/bed1.png" alt="" /></a>
                                 <p>침구</p>
                             </li>
-                            <li><a href="#"><img src="images/kids1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/kids1.png" alt="" /></a>
                                 <p>키즈</p>
                             </li>
-                            <li><a href="#"><img src="images/cutton1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/cutton1.png" alt="" /></a>
                                 <p>커튼</p>
                             </li>
-                            <li><a href="#"><img src="images/lug1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/lug1.png" alt="" /></a>
                                 <p>러그</p>
                             </li>
-                            <li><a href="#"><img src="images/kitchen1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/kitchen1.png" alt="" /></a>
                                 <p>키친</p>
                             </li>
-                            <li><a href="#"><img src="images/mattress1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/mattress1.png" alt="" /></a>
                                 <p>매트리스</p>
                             </li>
-                            <li><a href="#"><img src="images/homedeco1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/homedeco1.png" alt="" /></a>
                                 <p>홈데코</p>
                             </li>
-                            <li><a href="#"><img src="images/p1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/p1.png" alt="" /></a>
                                 <p>솜</p>
                             </li>
-                            <li><a href="#"><img src="images/bath1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/bath1.png" alt="" /></a>
                                 <p>욕실</p>
                             </li>
-                            <li><a href="#"><img src="images/Backgroundcopy1.png" alt="" /></a>
+                            <li><a href="/#"><img src="images/Backgroundcopy1.png" alt="" /></a>
                                 <p>생활용품</p>
                             </li>
                         </ul>
                     </div>
                     <div className="list-icon-bottom-mb">
                         <ul>
-                            <li className="icon-special"><a href="#">기획전</a></li>
-                            <li className="icon-community"><a href="#">커뮤니티</a></li>
-                            <li className="icon-push"><a href="#">알림내역</a></li>
-                            <li className="icon-setting"><a href="#">알림설정</a></li>
+                            <li className="icon-special"><a href="/#">기획전</a></li>
+                            <li className="icon-community"><a href="/#">커뮤니티</a></li>
+                            <li className="icon-push"><a href="/#">알림내역</a></li>
+                            <li className="icon-setting"><a href="/#">알림설정</a></li>
                         </ul>
                     </div>
                 </div>
