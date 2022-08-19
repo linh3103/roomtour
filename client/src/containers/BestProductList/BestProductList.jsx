@@ -1,6 +1,5 @@
 import {React, useState, useEffect} from 'react';
-import BestProductMB from '../../components/BestProduct/BestProduct_MB';
-import BestProductPC from '../../components/BestProduct/BestProduct_PC';
+import BestProductItem from '../../components/BestProduct/BestProductItem';
 import axios from 'axios';
 
 const BestProductList = () => {
@@ -14,7 +13,6 @@ const BestProductList = () => {
         }).then(res => setProducts(res.data))
           .catch(err => console.log(err))
     }, []);
-
     
     return (
         <div className="container amante-best">
@@ -29,7 +27,7 @@ const BestProductList = () => {
                 <div id="img-best-pc" className="col-right col-8">
                     <div className="row">
                         {
-                            products && products.map(item => <BestProductPC key={item.product_cd} product = {item}/>)
+                            products && products.map(item => <BestProductItem key={item.product_cd} product = {item} mode="PC"/>)
                         }
                     </div>
                 </div>
@@ -37,7 +35,7 @@ const BestProductList = () => {
                     <div className="flex-container">
                         <div className="row">
                         {
-                            products && products.map(item => <BestProductMB key={item.product_cd} product = {item}/>)
+                            products && products.map(item => <BestProductItem key={item.product_cd} product = {item} mode="MB"/>)
                         }
                         </div>
                     </div>
