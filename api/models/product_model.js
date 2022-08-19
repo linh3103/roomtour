@@ -39,6 +39,16 @@ ORDER BY
 // 	})
 // }
 
+Product.getDisplayList = (result) => {
+	sql = `SELECT *
+		   FROM vn_display
+		   ORDER BY display_seq
+		   LIMIT 3`;
+	mysql.query(sql, (err, res) => {
+		err ? result(null, err) : result(null, res);
+	})
+}
+
 Product.getInstaList = (result) => {
 	sql = `SELECT * 
 		   FROM wt_insta_data
