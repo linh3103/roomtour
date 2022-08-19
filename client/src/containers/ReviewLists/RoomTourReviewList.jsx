@@ -10,7 +10,7 @@ const RoomTourReviews = () => {
             url: "/reviews"
         }).then(res => setReviewList(res.data))
           .catch(err => console.log(err))
-    }, [])
+    }, []);
 
     return (
         <div className="house-warming container">
@@ -22,7 +22,14 @@ const RoomTourReviews = () => {
             <div className="img-house-warming">
                 <div className="row">
                     {
-                        reviewList && reviewList.map((item, index) => <ReviewItem no = {index} key = {item.room_tour_view_seq} review = {item}/>)
+                        reviewList && reviewList.map(
+                                                    (item, index) => 
+                                                        <ReviewItem 
+                                                            no = {index} 
+                                                            key = {item.room_tour_view_seq} 
+                                                            review = {item}
+                                                        />
+                                                    )
                     }
                 </div>
             </div>
