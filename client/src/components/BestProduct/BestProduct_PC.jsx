@@ -1,22 +1,13 @@
-import { React, useState, useEffect } from 'react';
-import axios from 'axios';
-const BestProductPC = (props) => {
-    const { product_cd, product_nm, sale_price, fee_rate } = props.product;
+import { React } from 'react';
 
-    const [imageName, setImageName] = useState("");
-    useEffect(() => {
-        axios({
-            method: "GET",
-            url: "/get_images/" + product_cd
-        }).then(res => setImageName(res.data[0].file_nm))
-            .catch(err => console.log(err))
-    }, [])
+const BestProductPC = (props) => {
+    const { product_nm, sale_price, fee_rate, file_nm } = props.product;
 
     return (
         <div className="col-4 ">
             <div className="col-img-bottom">
                 <p className="label">6컬러</p>
-                <a href="#"><img src={`https://www.amante.co.kr/uploads/product/`+imageName} alt="" /></a>
+                <a href="#"><img src={`https://www.amante.co.kr/uploads/product/`+file_nm} alt="" /></a>
                 <div className="caption-infor">
                     <a href="#">
                         <p className="txt">{product_nm}</p>

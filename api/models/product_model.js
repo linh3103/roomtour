@@ -5,7 +5,8 @@ const Product = (product) => {
 
 Product.getListBestProducts = (result) => {
     sql = `SELECT
-    tb2.product_cd,
+	tb2.product_cd,
+	tb2.product_nm,
 	tb2.product_nm,
 	tb2.supply_price,
 	tb2.sale_price,
@@ -17,21 +18,26 @@ Product.getListBestProducts = (result) => {
 	tb2.product_type,
 	tb2.POINT,
 	tb2.review_cnt,
-	tb2.order_cnt
-    FROM wt_product tb2
-    ORDER BY tb2.order_cnt desc
-    LIMIT 6`;
+	tb2.order_cnt,
+	tb3.file_nm 
+FROM
+	wt_product tb2
+	JOIN ( SELECT product_cd, file_nm FROM wt_product_file GROUP BY product_cd ) AS tb3 
+	ON tb2.product_cd = tb3.product_cd 
+ORDER BY
+	tb2.order_cnt DESC 
+	LIMIT 6`;
     mysql.query(sql, (err, res) => {
         err ? result(null, err) : result(null, res);
     })
 };
 
-Product.getImagesName = (product_cd, result) => {
-	sql= "SELECT file_nm from wt_product_file WHERE product_cd = ? limit 1";
-	mysql.query(sql, product_cd, (err, res) => {
-		err ? result(null, err) : result(null, res);
-	})
-}
+// Product.getImagesName = (product_cd, result) => {
+// 	sql= "SELECT file_nm from wt_product_file WHERE product_cd = ? limit 1";
+// 	mysql.query(sql, product_cd, (err, res) => {
+// 		err ? result(null, err) : result(null, res);
+// 	})
+// }
 
 Product.getInstaList = (result) => {
 	sql = `SELECT * 

@@ -7,8 +7,8 @@ module.exports = (app) => {
     app.route('/best_products')
         .get(ProductController.list_best_products);
 
-    app.route('/get_images/:product_cd')
-        .get(ProductController.get_images_name);
+    // app.route('/get_images/:product_cd')
+    //     .get(ProductController.get_images_name);
 
     app.route('/list_insta')
         .get(ProductController.get_insta_list);
