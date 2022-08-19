@@ -16,4 +16,8 @@ module.exports = (app) => {
     const CategoryController = require('../controllers/category_controller');
     app.route('/list_category')
         .get(CategoryController.list_category);
+
+    const ReviewController = require('../controllers/review_controller')
+    app.route('/reviews')
+        .get(ReviewController.get_list_reviews)
 }
